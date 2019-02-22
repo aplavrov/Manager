@@ -63,7 +63,7 @@ public class Quote extends AppCompatActivity {
                     public void run() {
                         Quote.this.finish();
                     }
-                }, 2000);
+                }, 1800);
             }
         });
     }
