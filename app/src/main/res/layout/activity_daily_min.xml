@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorStart"
+    tools:context=".DailyMin">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/timeView"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:text="17:04"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp"
+            app:fontFamily="monospace" />
+
+        <TextView
+            android:id="@+id/textNow"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="50dp"
+            android:text="Сейчас прочитано:"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp"
+            app:fontFamily="monospace" />
+
+        <EditText
+            android:id="@+id/editPages"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:maxLength="4"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="230dp"
+            android:layout_marginTop="43dp"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/textUpTo"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="80dp"
+            android:text="До страницы:"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp"
+            app:fontFamily="monospace" />
+
+        <EditText
+            android:id="@+id/editUpToPage"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:maxLength="4"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="73dp"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/buttonRes"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="110dp"
+            android:layout_marginRight="110dp"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/buttons"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Результат"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="28sp"
+            android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/buttonEnd"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="120dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/buttons_exit"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Закрыть"
+            android:visibility="invisible"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="28sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="200dp"
+            android:text="До страницы осталось:"
+            android:visibility="invisible"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp"
+            app:fontFamily="monospace" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="230dp"
+            android:text="В этот промежуток:"
+            android:visibility="invisible"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp"
+            app:fontFamily="monospace" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="260dp"
+            android:text="То есть, до страницы:"
+            android:visibility="invisible"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp"
+            app:fontFamily="monospace" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

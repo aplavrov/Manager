@@ -83,6 +83,7 @@
             android:background="@drawable/buttons"
             android:fontFamily="sans-serif-condensed"
             android:text="Чтение"
+            android:onClick="launchDailyMin"
             android:textAllCaps="false"
             android:textColor="@color/colorWhite"
             android:textSize="28sp"

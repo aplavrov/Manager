@@ -21,4 +21,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Quote.class);
         startActivity(intent);
     }
+
+    public void launchDailyMin (View view) {
+        Intent intentDM = new Intent(this, DailyMin.class);
+        startActivity(intentDM);
+    }
 }
