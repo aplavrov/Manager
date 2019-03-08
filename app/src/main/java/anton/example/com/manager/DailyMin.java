@@ -1,8 +1,10 @@
 package anton.example.com.manager;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -48,7 +50,9 @@ public class DailyMin extends AppCompatActivity {
         Calendar date = Calendar.getInstance();
         h = date.get(Calendar.HOUR_OF_DAY);
         m = date.get(Calendar.MINUTE);
-        mTimeView.setText(String.valueOf(h) + ":" + String.valueOf(m));
+        String zer = "";
+        if (m < 10) zer += "0";
+        mTimeView.setText(String.valueOf(h) + ":" + zer + String.valueOf(m));
         mEditPages.setText("0");
 
         try {
@@ -70,6 +74,10 @@ public class DailyMin extends AppCompatActivity {
         mButtonRes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                if (imm != null) {
+                    imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+                }
                 last = Integer.parseInt(mEditUpToPage.getText().toString());
                 try {
                     FileOutputStream fileOutput = openFileOutput("mincircum.txt", MODE_PRIVATE);
@@ -99,7 +107,9 @@ public class DailyMin extends AppCompatActivity {
         Calendar date = Calendar.getInstance();
         h = date.get(Calendar.HOUR_OF_DAY);
         m = date.get(Calendar.MINUTE);
-        mTimeView.setText(String.valueOf(h) + ":" + String.valueOf(m));
+        String zer = "";
+        if (m < 10) zer += "0";
+        mTimeView.setText(String.valueOf(h) + ":" + zer + String.valueOf(m));
         int minval = (m >= 30) ? 1 : 0;
         if (h < 22) k = 44 - (h * 2 + minval);
         if (curr < last) {
